@@ -10,8 +10,8 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).parent))
-from agent import plan_and_execute, NewlaOrchestrator
-from config import WORKSPACE_ROOT, DEFAULT_LLM
+from .agent import plan_and_execute, NewlaOrchestrator
+from .config import WORKSPACE_ROOT, DEFAULT_LLM
 
 app = FastAPI(
     title="Newla AI",
@@ -93,7 +93,7 @@ async def get_workspace_info()->Dict[str,Any]:
     except Exception as e:
         raise HTTPException(status_code=500,detail=str(e))
     
-@app.post("/workspace/files")
+@app.get("/workspace/files")
 async def list_workspace_files()->Dict[str,Any]:
     """
     List all files in workspace.
