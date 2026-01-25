@@ -11,7 +11,7 @@ from ..config import WORKSPACE_ROOT, MAX_RETRIES, DEFAULT_LLM
 
 class NewlaOrchestrator:
     """Main orchestrator for Newla AI agent."""
-    def ___init__(
+    def __init__(
             self,
             workspace_root:Path = WORKSPACE_ROOT,
             llm_provider:str = DEFAULT_LLM
