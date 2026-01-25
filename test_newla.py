@@ -11,7 +11,8 @@ sys.path.insert(0, str(Path(__file__).parent / "backend"))
 
 # from .backend.agent import NewlaOrchestrator
 from backend.agent import NewlaOrchestrator
-from .backend.config import WORKSPACE_ROOT
+# from .backend.config import WORKSPACE_ROOT
+from backend.config import WORKSPACE_ROOT
 
 
 def test_basic_functionality():
