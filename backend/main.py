@@ -10,8 +10,11 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).parent))
-from .agent import plan_and_execute, NewlaOrchestrator
-from .config import WORKSPACE_ROOT, DEFAULT_LLM
+
+# from agent import plan_and_execute, NewlaOrchestrator
+from backend.agent import NewlaOrchestrator, plan_and_execute
+
+from config import WORKSPACE_ROOT, DEFAULT_LLM
 
 app = FastAPI(
     title="Newla AI",

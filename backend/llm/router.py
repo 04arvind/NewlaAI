@@ -54,7 +54,8 @@ class LLMRouter:
         provider = provider or self.default_provider
         client = self.get_client(provider)
         return client.call_with_history(system_prompt,messages)
-    def call_llm(provider:str,system_prompt:str,user_prompt:str)->str:
+    
+def call_llm(provider:str,system_prompt:str,user_prompt:str)->str:
         """Convenience function to call any LLM provider.
         Args:
            provider:"claude" or "gemini"
